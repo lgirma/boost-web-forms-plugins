@@ -3,7 +3,8 @@
         getFormValidationResult,
         createFormConfig,
         onFieldChangeReducer,
-        AbstractForm
+        AbstractForm,
+        validateForm
     } from 'boost-web-forms'
     import { createEventDispatcher, onMount } from 'svelte';
     import SvelteWrapper from 'vdtree-svelte'
@@ -13,6 +14,7 @@
     export let forObject
     export let options = null
     export let validationResult = getFormValidationResult()
+
     let _safeOptions
 
     function initConfig(opts) {
@@ -21,9 +23,14 @@
             : (opts == null ? createFormConfig(forObject) : createFormConfig(forObject, opts))
         safeOptions.onsubmit = e => {
             if (safeOptions.autoValidate) {
-
+                validationResult = validateForm(forObject, _safeOptions)
+                dispatch('validate', validationResult)
+                e.validationResult = validationResult
+                if (!validationResult.hasError)
+                    dispatch('submit', e)
+                else
+                    e.preventDefault()
             }
-            dispatch('submit', e)
         }
         safeOptions.onchange = e => {
             forObject = onFieldChangeReducer(safeOptions, e)(forObject)
@@ -39,7 +46,6 @@
     }
 
     $: initConfig(options)
-    $: console.log('Safe Options', _safeOptions)
 
 </script>
 

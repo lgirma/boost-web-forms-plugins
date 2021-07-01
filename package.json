@@ -1,8 +1,9 @@
 {
   "name": "boost-web-forms-svelte",
-  "version": "1.7.0",
+  "version": "1.9.0",
   "description": "Svelte component for boost-web-forms library.",
   "svelte": "src/index.js",
+  "types": "src/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -16,7 +17,7 @@
   "peerDependencies": {
     "boost-web-forms": "^1.7.0",
     "vdtree": "^0.6.0",
-    "vdtree-svelte": "^0.2.0"
+    "vdtree-svelte": "^0.4.0"
   },
   "author": "Leone",
   "repository": "https://github.com/lgirma/boost-web-forms-svelte",
