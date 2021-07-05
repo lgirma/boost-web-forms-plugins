@@ -20,8 +20,8 @@
     "vdtree-svelte": "^0.4.0"
   },
   "author": "Leone",
-  "repository": "https://github.com/lgirma/boost-web-forms-svelte",
-  "homepage": "https://github.com/lgirma/boost-web-forms-svelte",
+  "repository": "https://github.com/lgirma/boost-web-forms-plugins",
+  "homepage": "https://github.com/lgirma/boost-web-forms-plugins",
   "license": "ISC",
   "keywords": [
     "form",

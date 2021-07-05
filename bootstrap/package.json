@@ -1,0 +1,41 @@
+{
+  "name": "boost-web-forms-bootstrap",
+  "version": "1.8.0",
+  "description": "Bootstrap plugin for boost-web-forms",
+  "module": "dist/boost-web-forms-bootstrap.es.js",
+  "main": "dist/boost-web-forms-bootstrap.umd.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc --emitDeclarationOnly",
+    "serve": "vite preview"
+  },
+  "author": "Leone",
+  "repository": "https://github.com/lgirma/boost-web-forms-plugins",
+  "homepage": "https://github.com/lgirma/boost-web-forms-plugins",
+  "license": "ISC",
+  "keywords": [
+    "form",
+    "javascript",
+    "boost-web-forms",
+    "bootstrap"
+  ],
+  "devDependencies": {
+    "@types/jquery": "^3.5.5",
+    "bootstrap3": "npm:bootstrap@^3.4.1",
+    "bootstrap4": "npm:bootstrap@^4.6.0",
+    "bootstrap5": "npm:bootstrap@^5.0.2",
+    "jquery": "^3.6.0",
+    "typescript": "^4.3.2",
+    "vite": "^2.3.8"
+  },
+  "peerDependencies": {
+    "boost-web-forms": "^1.8.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ]
+}
