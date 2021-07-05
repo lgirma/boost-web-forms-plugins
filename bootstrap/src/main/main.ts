@@ -13,8 +13,7 @@ const forObject = {
 
 const formConfig = {
     scale: 1,
-    layout: Bootstrap4Form({isInline: true}),
-    noValidate: true
+    ...Bootstrap4Form({columns: 2})
 }
 
 

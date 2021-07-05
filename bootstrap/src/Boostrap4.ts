@@ -22,7 +22,7 @@ export function Bootstrap4Form(layoutOptions?: Partial<BootstrapLayoutOptions>) 
         isInline: false,
         ...layoutOptions
     }
-    return function (props: FormLayoutProps) {
+    let layout = function (props: FormLayoutProps) {
         let htmlAttrs: any = {}
         if (_layoutOptions.isInline)
             htmlAttrs.class = 'form-inline'
@@ -33,6 +33,8 @@ export function Bootstrap4Form(layoutOptions?: Partial<BootstrapLayoutOptions>) 
             htmlAttrs
         })
     }
+
+    return {layout}
 }
 
 function Bootstrap4FieldSet({field, value, fieldValidationResult, layoutOptions}: BootstrapFieldSetProps): AbstractDomElement {
