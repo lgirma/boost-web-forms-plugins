@@ -18,6 +18,7 @@ export interface BootstrapLayoutOptions {
     columns: number
     isInline: boolean
     horizontalLabels: boolean
+    fullWidthSubmit: boolean
 }
 
 export function getColumnClass(columns: number, colSpan: number, prefix = 'col-', maxCols = 12) {

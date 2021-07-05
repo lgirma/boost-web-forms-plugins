@@ -37,6 +37,7 @@ The plugin includes the following options:
 |`columns`| number | The number of total columns in the form | 1
 |`isInline`| boolean | Whether to generate an in-line form | false
 |`horizontalLabels`| boolean | Whether to put labels and inputs horizontally | false
+|`fullWidthSubmit`| boolean | Whether to create a block button for submit | false
 
 ## See
 

@@ -16,10 +16,11 @@ const classTable = {
 } as any
 
 export function Bootstrap4Form(layoutOptions?: Partial<BootstrapLayoutOptions>) {
-    let _layoutOptions = {
+    let _layoutOptions: BootstrapLayoutOptions = {
         columns: 1,
         horizontalLabels: false,
         isInline: false,
+        fullWidthSubmit: false,
         ...layoutOptions
     }
     let layout = function (props: FormLayoutProps) {
@@ -49,7 +50,8 @@ function Bootstrap4FieldSet({field, value, fieldValidationResult, layoutOptions}
         else
             inputClass += ` form-control-${field.scale > 1 ? 'lg' : 'sm'}`
     }
-
+    if (field.type == 'submit' && layoutOptions.fullWidthSubmit)
+        inputClass += ' btn-block'
     if (layoutOptions.isInline && isEmpty(field.placeholder))
         field.placeholder = field.label
 
