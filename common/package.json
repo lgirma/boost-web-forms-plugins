@@ -10,6 +10,9 @@
   "repository": "https://github.com/lgirma/boost-web-forms-plugins",
   "homepage": "https://github.com/lgirma/boost-web-forms-plugins",
   "license": "ISC",
+  "peerDependencies": {
+    "boost-web-forms": "^1.9.0"
+  },
   "keywords": [
     "form",
     "javascript",

@@ -6,6 +6,7 @@ import * as React from 'react'
 export interface ReactFormProps extends DeepPartial<FormConfig> {
     forObject: any,
     validationResult?: FormValidationResult
+    onFormChange?: (e: any) => void
 }
 
 export function ReactForm(props: ReactFormProps) {
@@ -14,8 +15,10 @@ export function ReactForm(props: ReactFormProps) {
         validationResult = {hasError: false, message: '', fields: {}}
     } = props
     let formConfig = props.$$isComplete
-        ? {...props, forObject: undefined, validationResult: undefined} as FormConfig
+        ? {...props, forObject: undefined, validationResult: undefined, onFormChange: undefined} as FormConfig
         : createFormConfig(forObject, {...props, forObject: undefined, validationResult: undefined})
+    const [formData, setFormData] = React.useState(forObject)
+
     if (formConfig.autoValidate) {
         const [vr, setVr] = React.useState(getFormValidationResult())
         const originalOnSubmit = formConfig.onSubmit || formConfig.onsubmit

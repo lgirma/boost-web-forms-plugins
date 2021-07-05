@@ -10,6 +10,11 @@
   "repository": "https://github.com/lgirma/boost-web-forms-plugins",
   "homepage": "https://github.com/lgirma/boost-web-forms-plugins",
   "license": "ISC",
+  "peerDependencies": {
+    "boost-web-forms": "^1.9.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  },
   "keywords": [
     "form",
     "javascript",
@@ -26,11 +31,6 @@
   "description": "React plugin for boost-web-forms",
   "module": "dist/boost-web-forms-react.es.js",
   "main": "dist/boost-web-forms-react.umd.js",
-  "peerDependencies": {
-    "boost-web-forms": "^1.9.0",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0"
-  },
   "devDependencies": {
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
