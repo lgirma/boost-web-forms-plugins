@@ -57,5 +57,14 @@ export const formConfig = {
         invalidTyped: {type: 'go'},
         answer: {type: 'markdown'},
         jsonInput: {type: 'sourcecode'}
+    },
+    validate: val => {
+        if (val.password !== val.confirmPassword) {
+            return {
+                password: 'Does not match with confirm password.',
+                confirmPassword: 'Does not match with password'
+            }
+        }
+        return {}
     }
 }

@@ -1,13 +1,13 @@
-import '../../node_modules/bootstrap5/dist/css/bootstrap.css'
-import '../../node_modules/bootstrap5/dist/js/bootstrap'
+import '../../node_modules/bootstrap3/dist/css/bootstrap.css'
+import '../../node_modules/bootstrap3/dist/js/bootstrap'
 
 import {renderForm} from "boost-web-forms";
-import {Bootstrap5Form} from "../Bootstrap5";
+import {Bootstrap3Form} from "../Bootstrap3";
 import {forObject, formConfig} from '../../../common/sample-form'
 
 const config = {
     ...formConfig,
-    ...Bootstrap5Form({columns: 2, fullWidthSubmit: true})
+    ...Bootstrap3Form({columns: 2, fullWidthSubmit: true})
 }
 
 
